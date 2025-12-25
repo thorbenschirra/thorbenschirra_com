@@ -57,7 +57,7 @@ export default function Home() {
           </div>
 
           <div className="py-24 space-y-6 flex flex-row justify-between">
-            <div className="flex flex-col">
+            <div className="flex flex-col space-y-4">
               <h3 className="text-3xl font-semibold">
                 playce - Automated access solution platform
               </h3>
@@ -78,17 +78,20 @@ export default function Home() {
                     To achieve this I utilized:
                   </p>
                   <li>
-                    <strong>Seam Co.</strong> for smart lock control
+                    <strong>Seam Co.</strong> - API for smart lock control
                   </li>
                   <li>
-                    <strong>Stripe Connect</strong> for payment processing
-                    between multiple parties
+                    <strong>Stripe Connect</strong> - payment processing between
+                    multiple parties
                   </li>
                   <li>
-                    <strong>Java Spring Boot</strong> for the backend
+                    <strong>Java Spring Boot</strong> - backend
                   </li>
                   <li>
-                    <strong>Next.JS</strong> for the frontend
+                    <strong>Next.JS</strong> - frontend
+                  </li>
+                  <li>
+                    <strong>Supabase</strong> - database
                   </li>
                 </ul>
               </div>
@@ -101,6 +104,32 @@ export default function Home() {
                 className=""
                 alt="playce logo"
               />
+            </div>
+          </div>
+
+          <div className="py-24 space-y-6 flex flex-row justify-between">
+            <div className="flex flex-col space-y-4">
+              <h3 className="text-3xl font-semibold">
+                Russello Finanz - Real estate financing
+              </h3>
+              <div className="flex flex-col space-y-8">
+                <p className="flex text-lg">
+                  I created a website for a local real estate business that
+                  specialises on loans and credits.
+                </p>
+                <ul>
+                  <p className="font-bold text-xl">Tech stack:</p>
+                  <li className="">
+                    <strong>Bootstrapped with Next.JS</strong>
+                  </li>
+                  <li className="">
+                    <strong>PostgreSQL</strong> - database
+                  </li>
+                  <li className="">
+                    <strong>API in Next.JS App router</strong>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

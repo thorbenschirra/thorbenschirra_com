@@ -3,7 +3,7 @@ export default function Header() {
     <div className="navbar">
       <div className="flex-1"></div>
       <div className="flex-none">
-        <ul className="menu menu-horizontal px-1 text-xl pr-12 space-x-8">
+        <ul className="menu menu-horizontal px-1 text-lg pr-12 space-x-5">
           <li>
             <a>Blog</a>
           </li>

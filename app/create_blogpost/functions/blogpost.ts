@@ -1,6 +1,6 @@
 "use server"
 
-import { Blogpost, StoreBlogpost } from "@/app/types/blogpost";
+import { StoreBlogpost } from "@/app/types/blogpost";
 import { createSupabaseServerClient } from "@/app/lib/supabase/server-client";
 
 export async function getPosts() {

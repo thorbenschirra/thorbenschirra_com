@@ -30,10 +30,10 @@ export default async function page({
   return (
     <div className="">
       <Header />
-      <div className="m-20 space-y-4">
+      <div className="mx-12 space-y-14">
         <Link
           href="/blog"
-          className="btn btn-xs bg-white shadow-none text-black border-none space-x-4"
+          className="btn btn-md bg-white shadow-none text-black border-none space-x-4"
         >
           <p>Back to the blog</p>
           <svg
@@ -58,7 +58,7 @@ export default async function page({
           {blogpost.keywords.map((keyword: string, index: number) => (
             <div
               key={index}
-              className="p-2 border border-gray-200 rounded-box w-min"
+              className="text-sm p-1 border border-gray-200 w-min"
             >
               {keyword}
             </div>

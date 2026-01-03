@@ -49,7 +49,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="justify-start w-full">
+        <div id="portfolio" className="justify-start w-full">
           <div className="">
             <h2 className="text-5xl font-semibold">
               Some of my personal projects include

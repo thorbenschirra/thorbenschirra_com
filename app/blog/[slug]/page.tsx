@@ -73,7 +73,7 @@ export default async function page({
           <h3 className="font-semibold text-2xl border-b border-gray-200">
             Content
           </h3>
-          <p style={{ whiteSpace: "pre-line" }} className="playfair">
+          <p style={{ whiteSpace: "pre-line" }} className="playfair prose">
             {blogpost.content}
           </p>
         </div>

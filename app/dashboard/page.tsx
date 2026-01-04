@@ -5,8 +5,29 @@ import { createSupabaseServerClient } from "../lib/supabase/server-client";
 export default async function dashboard() {
   const supabase = await createSupabaseServerClient();
 
-  const user = await supabase.auth.getUser();
-  console.log("user: ", user);
+  const error = await supabase.auth.getUser();
+
+  if (error) {
+    return (
+      <div>
+        <Header />
+        <div className="hero min-h-screen">
+          <div className="hero-content text-center">
+            <div className="max-w-md">
+              <h1 className="text-5xl font-bold">Unauthorized</h1>
+              <p className="py-6">
+                You are not authorized to view this page. <br />
+                Please login if you have an account.
+              </p>
+              <Link href="/login" className="btn">
+                Login
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="">

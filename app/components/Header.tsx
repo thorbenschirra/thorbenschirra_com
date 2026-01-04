@@ -1,8 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   return (
     <div className="navbar">
+      <Link href="/" className="cursor-pointer">
+        <Image src="/TS.png" alt="logo" width={50} height={50} />
+      </Link>
       <div className="flex-1"></div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1 text-lg pr-12 space-x-5">

@@ -5,9 +5,11 @@ import { createSupabaseServerClient } from "../lib/supabase/server-client";
 export default async function dashboard() {
   const supabase = await createSupabaseServerClient();
 
-  const error = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
 
-  if (error) {
+  if (user?.aud !== "authenticated") {
     return (
       <div>
         <Header />

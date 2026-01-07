@@ -30,7 +30,7 @@ export default async function page({
   return (
     <div className="">
       <Header />
-      <div className="flex flex-col w-1/2 mx-48 space-y-6">
+      <div className="flex flex-col w-1/2 space-y-6">
         <Link
           href="/blog"
           className="justify-start btn btn-md bg-white shadow-none text-black border-none space-x-4"

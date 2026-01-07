@@ -26,14 +26,14 @@ export default async function page({
     );
   }
 
-  const blogpost = response.body;
+  const blogpost: Blogpost = response.body;
   return (
     <div className="">
       <Header />
-      <div className="mx-12 space-y-6">
+      <div className="flex flex-col w-1/2 mx-48 space-y-6">
         <Link
           href="/blog"
-          className="btn btn-md bg-white shadow-none text-black border-none space-x-4"
+          className="justify-start btn btn-md bg-white shadow-none text-black border-none space-x-4"
         >
           <p>Back to the blog</p>
           <svg
@@ -51,31 +51,33 @@ export default async function page({
             />
           </svg>
         </Link>
-        <h2 className="text-4xl font-semibold border-b border-gray-200 p-2">
-          {blogpost.header}
-        </h2>
-        <div className="flex flex-row space-x-2">
-          {blogpost.keywords.map((keyword: string, index: number) => (
-            <div key={index} className="text-sm p-2 border border-gray-200">
-              {keyword}
-            </div>
-          ))}
-        </div>
-        <div className="space-y-4">
-          <h3 className="font-semibold text-2xl border-b border-gray-200">
-            Description / Intro
-          </h3>
-          <p style={{ whiteSpace: "pre-line" }} className="playfair">
-            {blogpost.description}
-          </p>
-        </div>
-        <div className="space-y-4">
-          <h3 className="font-semibold text-2xl border-b border-gray-200">
-            Content
-          </h3>
-          <p style={{ whiteSpace: "pre-line" }} className="playfair prose">
-            {blogpost.content}
-          </p>
+        <div className="">
+          <h2 className="text-4xl font-semibold border-b border-gray-200 p-2">
+            {blogpost.header}
+          </h2>
+          <div className="flex flex-row space-x-2">
+            {blogpost.keywords.map((keyword: string, index: number) => (
+              <div key={index} className="text-sm p-2 border border-gray-200">
+                {keyword}
+              </div>
+            ))}
+          </div>
+          <div className="space-y-4">
+            <h3 className="font-semibold text-2xl border-b border-gray-200">
+              Description / Intro
+            </h3>
+            <p style={{ whiteSpace: "pre-line" }} className="playfair">
+              {blogpost.description}
+            </p>
+          </div>
+          <div className="space-y-4">
+            <h3 className="font-semibold text-2xl border-b border-gray-200">
+              Content
+            </h3>
+            <p style={{ whiteSpace: "pre-line" }} className="playfair prose">
+              {blogpost.content}
+            </p>
+          </div>
         </div>
       </div>
     </div>

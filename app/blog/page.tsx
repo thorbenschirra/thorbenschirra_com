@@ -14,7 +14,7 @@ export default async function blog() {
   return (
     <div>
       <Header />
-      <div className="m-20 space-y-14">
+      <div className="px-4 md:m-20 space-y-14">
         <div className="space-y-4">
           <p className="text-xl font-semibold">
             Note: This is my blog. That means these are my beliefs, opinions and
@@ -35,7 +35,7 @@ export default async function blog() {
             const keywords = post.keywords;
             return (
               <Link key={index} href={`/blog/${post.id}`}>
-                <div className="flex flex-col items-end space-y-4 border border-gray-200 p-4 w-3/4">
+                <div className="flex flex-col items-end space-y-4 border border-gray-200 p-4">
                   <h2 className="text-2xl font-semibold border-b border-gray-200 w-full">
                     {post.header}
                   </h2>

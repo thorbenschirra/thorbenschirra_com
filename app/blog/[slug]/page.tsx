@@ -31,8 +31,8 @@ export default async function page({
   return (
     <div className="">
       <Header />
-      <div className="flex flex-col items-center">
-        <div className="flex flex-col space-y-6 w-1/2 items-center content-center">
+      <div className="flex flex-col md:items-center">
+        <div className="flex flex-col space-y-6 md:w-1/2 md:items-center md:content-center px-4">
           <h2 className="text-4xl font-semibold border-b border-gray-200 p-2">
             {blogpost.header}
           </h2>
@@ -46,7 +46,7 @@ export default async function page({
           <p className="text-sm">Written on: {date}</p>
           <div className="space-y-4">
             <h3 className="font-semibold text-2xl border-b border-gray-200">
-              Description / Intro
+              Description
             </h3>
             <p style={{ whiteSpace: "pre-line" }} className="playfair">
               {blogpost.description}

@@ -9,7 +9,7 @@ export default function Header() {
       </Link>
       <div className="flex-1"></div>
       <div className="flex-none">
-        <ul className="menu menu-horizontal px-1 text-lg pr-12 space-x-5">
+        <ul className="menu menu-horizontal md:px-1 text-sm md:text-lg md:pr-12 md:space-x-5">
           <li>
             <Link href="/blog">Blog</Link>
           </li>

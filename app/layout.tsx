@@ -5,6 +5,7 @@ import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -18,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-white">
+    <html lang="en" className={`bg-white ${inter.variable}`}>
       <body className={`${inter.className} text-black bg-white`}>
         {children}
         <Analytics />

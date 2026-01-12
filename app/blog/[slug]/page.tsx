@@ -31,28 +31,8 @@ export default async function page({
   return (
     <div className="">
       <Header />
-      {/* <Link
-        href="/blog"
-        className="mx-4 btn btn-md bg-white shadow-none text-black border-none space-x-4"
-      >
-        <p>Back to the blog</p>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="size-6"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3"
-          />
-        </svg>
-      </Link> */}
       <div className="flex flex-col items-center">
-        <div className="flex flex-col space-y-6 items-center content-center">
+        <div className="flex flex-col space-y-6 w-1/2 items-center content-center">
           <h2 className="text-4xl font-semibold border-b border-gray-200 p-2">
             {blogpost.header}
           </h2>
@@ -63,7 +43,7 @@ export default async function page({
               </div>
             ))}
           </div>
-          <p className="text-gray-400 text-sm">Written on: {date}</p>
+          <p className="text-sm">Written on: {date}</p>
           <div className="space-y-4">
             <h3 className="font-semibold text-2xl border-b border-gray-200">
               Description / Intro
@@ -76,7 +56,10 @@ export default async function page({
             <h3 className="font-semibold text-2xl border-b border-gray-200">
               Content
             </h3>
-            <div style={{ whiteSpace: "pre-line" }} className="playfair prose">
+            <div
+              style={{ whiteSpace: "pre-line" }}
+              className="playfair prose text-black prose-headings:text-black"
+            >
               <ReactMarkdown>{blogpost.content}</ReactMarkdown>
             </div>
           </div>

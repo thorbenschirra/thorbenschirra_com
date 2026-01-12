@@ -1,7 +1,7 @@
 import Header from "@/app/components/Header";
 import { getPost } from "@/app/create_blogpost/functions/blogpost";
 import { Blogpost } from "@/app/types/blogpost";
-import Link from "next/link";
+import ReactMarkdown from "react-markdown";
 
 export default async function page({
   params,
@@ -31,7 +31,7 @@ export default async function page({
   return (
     <div className="">
       <Header />
-      <Link
+      {/* <Link
         href="/blog"
         className="mx-4 btn btn-md bg-white shadow-none text-black border-none space-x-4"
       >
@@ -50,9 +50,9 @@ export default async function page({
             d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3"
           />
         </svg>
-      </Link>
+      </Link> */}
       <div className="flex flex-col items-center">
-        <div className="flex flex-col space-y-6 w-1/2 items-center content-center">
+        <div className="flex flex-col space-y-6 items-center content-center">
           <h2 className="text-4xl font-semibold border-b border-gray-200 p-2">
             {blogpost.header}
           </h2>
@@ -76,9 +76,9 @@ export default async function page({
             <h3 className="font-semibold text-2xl border-b border-gray-200">
               Content
             </h3>
-            <p style={{ whiteSpace: "pre-line" }} className="playfair prose">
-              {blogpost.content}
-            </p>
+            <div style={{ whiteSpace: "pre-line" }} className="playfair prose">
+              <ReactMarkdown>{blogpost.content}</ReactMarkdown>
+            </div>
           </div>
         </div>
       </div>

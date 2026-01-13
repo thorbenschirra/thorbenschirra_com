@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <div className="space-y-24 px-24">
+      <div className="space-y-24 px-4 md:px-24 py-24">
         <div className="min-h-screen content-center">
-          <div className=" flex flex-row justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-col space-y-6">
               <h2 className="font-semibold text-5xl py-6">Hi, I am Thorben.</h2>
               <p className="">
@@ -56,8 +56,16 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="py-24 space-y-6 flex flex-row justify-between">
+          <div className="py-24 space-y-6 flex flex-row justify-betwee w-full">
             <div className="flex flex-col space-y-4">
+              <Image
+                src="/playce_logo.png"
+                width="500"
+                height="200"
+                className="flex md:hidden"
+                alt="playce logo"
+              />
+
               <h3 className="text-3xl font-semibold">
                 playce - Automated access solution platform
               </h3>
@@ -96,15 +104,14 @@ export default function Home() {
                 </ul>
               </div>
             </div>
-            <div className="flex">
-              <Image
-                src="/playce_logo.png"
-                width="500"
-                height="200"
-                className=""
-                alt="playce logo"
-              />
-            </div>
+
+            <Image
+              src="/playce_logo.png"
+              width="500"
+              height="200"
+              className="hidden md:flex"
+              alt="playce logo"
+            />
           </div>
 
           <div className="py-24 space-y-6 flex flex-row justify-between">

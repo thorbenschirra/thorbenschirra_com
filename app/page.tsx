@@ -57,7 +57,7 @@ export default function Home() {
           </div>
 
           <div className="py-24 space-y-6 flex flex-row justify-between content-center">
-            <div className="flex flex-col space-y-4 content-center border">
+            <div className="flex flex-col space-y-4 content-center">
               <Image
                 src="/playce_logo.png"
                 width="500"

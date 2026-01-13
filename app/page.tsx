@@ -56,8 +56,8 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="py-24 space-y-6 flex flex-row justify-betwee w-full">
-            <div className="flex flex-col space-y-4">
+          <div className="py-24 space-y-6 flex flex-row justify-between content-center">
+            <div className="flex flex-col space-y-4 content-center border">
               <Image
                 src="/playce_logo.png"
                 width="500"
@@ -108,7 +108,7 @@ export default function Home() {
             <Image
               src="/playce_logo.png"
               width="500"
-              height="200"
+              height="10"
               className="hidden md:flex"
               alt="playce logo"
             />

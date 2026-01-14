@@ -4,6 +4,8 @@ import XIcon from "./components/XIcon";
 import MailIcon from "./components/MailIcon";
 import LinkedInIcon from "./components/LinkedInIcon";
 import GitHubIcon from "./components/GitHubIcon";
+import links from "../links.json";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -31,10 +33,11 @@ export default function Home() {
                 contact me over my socials.
               </p>
               <div className="flex flex-row space-x-10 py-24">
-                <XIcon />
-                <MailIcon />
-                <LinkedInIcon />
-                <GitHubIcon />
+                {links.external.map((item, index) => (
+                  <Link key={index} href={item.link} className="">
+                    {item.label}
+                  </Link>
+                ))}
               </div>
             </div>
 

@@ -1,7 +1,13 @@
-export default function GitHubIcon() {
+export default function GitHubIcon({
+  label,
+  link,
+}: {
+  label: string;
+  link: string;
+}) {
   return (
     <div>
-      <a href="https://github.com/noxnx">
+      <a href={link} id={label}>
         <svg
           className="size-10"
           xmlns="http://www.w3.org/2000/svg"

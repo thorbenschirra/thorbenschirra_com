@@ -1,0 +1,8 @@
+{
+    "external": [
+        { "label": "LinkedIn", "link": "" },
+        { "label": "X", "link": "x.com/thorbenschirra"},
+        { "label": "GitHub", "link": "Github"},
+        { "label": "Email", "link": "mailto:thsc00019@stud.uni-saarland.de"}
+    ]
+}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={`${inter.className} text-black bg-white`}>
         {children}
         <Analytics />
+        <GoogleAnalytics gaId={`${process.env.GOOGLE_ANALYTICS_ID}`} />
       </body>
     </html>
   );

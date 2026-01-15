@@ -42,3 +42,6 @@ next-env.d.ts
 
 # supabase file
 app/clients/supabase.ts
+
+#google service account
+thorbenschirracom-1e43f2ba1137.json

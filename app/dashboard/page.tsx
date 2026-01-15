@@ -1,9 +1,12 @@
 import Link from "next/link";
 import Header from "../components/Header";
 import { createSupabaseServerClient } from "../lib/supabase/server-client";
+import { runReport } from "../functions/analytics";
 
 export default async function dashboard() {
   const supabase = await createSupabaseServerClient();
+  const data = await runReport();
+  console.log("Report data", data);
 
   const {
     data: { user },

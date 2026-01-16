@@ -24,9 +24,6 @@ export async function analyticsClient() {
             private_key: privateKey
         }
     });
-
-    client.runReport({
-        
-    })
+    
     return client;
 }

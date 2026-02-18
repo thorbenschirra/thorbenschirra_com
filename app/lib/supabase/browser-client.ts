@@ -15,8 +15,13 @@ export async function getSupabaseBrowserClient() {
     const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
     const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-    if (!supabaseUrl || !supabaseAnonKey) {
-        throw new Error ("missing supabase url or supabase anon key!");
+    if (
+        !supabaseUrl || 
+        !supabaseAnonKey || 
+        supabaseAnonKey === undefined || 
+        supabaseUrl === undefined
+    ) {
+        throw new Error("supabase credentials are missing");
     }
 
     client = createBrowserClient<SupabaseSchema>(supabaseUrl, supabaseAnonKey);

@@ -4,11 +4,16 @@ import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
 
 function getEnvVariables() {
-        const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-        const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+        const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+        const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-        if (!supabaseUrl || !supabaseAnonKey) {
-            throw new Error ("supabase url or supabase anon key are missing!");
+        if (
+            !supabaseUrl || 
+            !supabaseAnonKey || 
+            supabaseAnonKey === undefined || 
+            supabaseUrl === undefined
+        ) {
+            throw new Error("supabase credentials are missing");
         }
 
         return { supabaseUrl, supabaseAnonKey }

@@ -1,12 +1,10 @@
 import Link from "next/link";
 import Header from "../components/Header";
 import { createSupabaseServerClient } from "../lib/supabase/server-client";
-import { runReport } from "../functions/analytics";
+import AnalyticsChart from "../components/AnalyticsChart";
 
 export default async function dashboard() {
   const supabase = await createSupabaseServerClient();
-  const data = await runReport();
-  console.log("Report data", data);
 
   const {
     data: { user },
@@ -43,6 +41,7 @@ export default async function dashboard() {
           <div className="flex flex-row justify-between border-b py-1.5">
             <h2 className="text-2xl font-semibold">Statistics</h2>
           </div>
+          <AnalyticsChart />
         </div>
         <div className="w-2/3 space-y-8">
           <div className="flex flex-row justify-between border-b py-1.5">

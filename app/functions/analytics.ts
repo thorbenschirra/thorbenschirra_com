@@ -2,7 +2,7 @@
 
 import { analyticsClient } from "../lib/clients/google";
 
-export async function runReport() {
+export async function totalUsers(nDaysAgo: number | undefined) {
 
     const google = await analyticsClient();
     const propertyId = process.env.GOOGLE_PROPERTY_ID;
@@ -14,14 +14,16 @@ export async function runReport() {
         }
     }
 
-    console.log("Property ID: ", propertyId);
+    if (nDaysAgo === undefined) {
+        
+    }
 
     try {
         const response = await google.runReport({
             property: `properties/${propertyId}`,
             dateRanges: [
                 {
-                  startDate: '2026-01-01',
+                  startDate: `${nDaysAgo}daysAgo`,
                   endDate: 'today',
                 },
               ],

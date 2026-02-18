@@ -1,8 +1,20 @@
-import Chart from "chart.js/auto";
-import { runReport } from "../functions/analytics";
+"use client";
 
-export default async function AnalyticsChart() {
-  const data = (await runReport()).body;
+import Chart from "chart.js/auto";
+import { useState, useEffect } from "react";
+import { totalUsers } from "../functions/analytics";
+
+export default function AnalyticsChart() {
+  const [days, setDays] = useState<number>(7);
+  const [analyticsData, setAnalyticsData] = useState([]);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    totalUsers(days)
+      .then((response) => setAnalyticsData(response.body))
+      .catch((error) => setError(`An error occured: ${error}`));
+  }, [days]);
+  console.log("analytics data", analyticsData);
 
   /* const chart = new Chart(ctx, {
     type: 'line',
